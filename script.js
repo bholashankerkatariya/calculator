@@ -75,11 +75,12 @@ function addValue(value) {
         expression.lastIndexOf('x'), 
         expression.lastIndexOf('/'));
         //check if this isthe first dcimal in the current number or if the expression is empty
-        if( lastDecimalIndex < isLastOperatorIndex || 
+        if(
+            (lastDecimalIndex < isLastOperatorIndex || 
             lastDecimalIndex < lastNumberIndex || 
             lastDecimalIndex  === -1) && 
             (expression === '' || expression.slice
-            (lastNumberIndex + 1).indexOf('-') === -1)
+            (lastNumberIndex + 1).indexOf('-') === -1))
             {
                 expression += value;
             }          
